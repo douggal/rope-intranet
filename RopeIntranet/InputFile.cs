@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace RopeIntranet
 {
+    /// <summary>
+    /// A class to read the data input file.
+    /// </summary>
     public class InputFile
     {
         public String FileName { get; set; }
@@ -13,6 +15,9 @@ namespace RopeIntranet
 
         public InputFile()
         {
+            // There are two input files available, small and large.
+            // File name hardcoded here as there seemed to reason to prompt the user
+            // to pick a file from local file system.
             FileName = "A-small-practice.txt";
             //FileName = "A-large-practice.txt";
             FileContents = new List<String>();

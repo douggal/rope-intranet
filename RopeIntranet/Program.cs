@@ -76,10 +76,10 @@ namespace RopeIntranet
         /// 
         /// 1 ≤ N ≤ 1000.
         /// 
-        /// Done quoting.
+        /// /Done quoting.
         /// 
-        /// Write a program to read the input data and solve each case for number of
-        /// intersections.
+        /// Write a program to read the input data file and solve each case for number of
+        /// intersections.  Assume the data file is of reasonable size and contains valid data.
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
@@ -91,6 +91,7 @@ namespace RopeIntranet
             Console.WriteLine("Reading input file....");
             infile.ReadInputFile();
             Console.WriteLine("Done reading input file.");
+
             //for (var line=0; line<=infile.FileContents.Count-1; line++)
             //{
             //    Console.WriteLine("Line {0}: {1}", line,infile.FileContents[line]);
@@ -100,6 +101,9 @@ namespace RopeIntranet
             int ncases = int.Parse(infile.ReadLineOfInput());
             Console.WriteLine("Number of cases/samples:  {0}", ncases);
 
+            // for each case in the file - I call it a sample - 
+            // populate the case wire by wire read in from the data file,
+            // compute number of crossings, then move on to next case.
             for (int i = 1; i <= ncases; i++)
             {
                 nwires = int.Parse(infile.ReadLineOfInput());

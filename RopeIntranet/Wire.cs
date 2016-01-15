@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RopeIntranet
+﻿namespace RopeIntranet
 {
     /// <summary>
     /// A representation a wire stretched between two buildings, A and B.

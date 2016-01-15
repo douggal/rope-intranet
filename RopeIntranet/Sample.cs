@@ -4,6 +4,11 @@ using System.Text;
 
 namespace RopeIntranet
 {
+    /// <summary>
+    /// A sample is what is called a case in the problem description.
+    /// It is a representation of two buildings with the intranet of
+    /// wires strung between them.
+    /// </summary>
     public class Sample
     {
         public int NumberWires { get; set; }
