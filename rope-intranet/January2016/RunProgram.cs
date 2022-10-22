@@ -4,7 +4,7 @@ using System.Text;
 
 namespace rope_intranet
 {
-    public class RunProgram
+    public class Jan2016Pgm
     {
         /// <summary>
         /// A programming exercise.  January 2016
