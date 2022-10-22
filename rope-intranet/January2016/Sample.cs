@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RopeIntranet
+namespace rope_intranet
 {
     /// <summary>
     /// A sample is what is called a case in the problem description.

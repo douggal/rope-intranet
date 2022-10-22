@@ -8,4 +8,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="January2016\" />
+    <None Remove="A-large-practice.txt" />
+    <None Remove="A-small-practice.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="January2016\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="A-large-practice.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="A-small-practice.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>

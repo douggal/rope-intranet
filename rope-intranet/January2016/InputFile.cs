@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace RopeIntranet
+namespace rope_intranet
 {
     /// <summary>
     /// A class to read the data input file.

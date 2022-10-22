@@ -7,6 +7,10 @@ in managing source code with GitHub. -January 2016
 Updated October 2022.  Migrated the project to a new solution in C# with .NET 6 using
 Visual Studio 2022 for Mac.
 
+## Folder strucuture
+rope-intranet/January2016 - original solution migrated to .NET Core
+rope-intranet/Oct2022 - a new solution
+
 ## Problem
 From Google Code Jam Round 1C 2010 - Rope Intranet.  Quoting from the website:
 

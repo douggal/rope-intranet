@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RopeIntranet
+namespace rope_intranet
 {
-    class Program
+    public class RunProgram
     {
         /// <summary>
         /// A programming exercise.  January 2016
@@ -82,7 +82,7 @@ namespace RopeIntranet
         /// intersections.  Assume the data file is of reasonable size and contains valid data.
         /// </summary>
         /// <param name="args"></param>
-        static void Main(string[] args)
+        public static void Run()
         {
             Console.WriteLine("Rope Intranet");
 

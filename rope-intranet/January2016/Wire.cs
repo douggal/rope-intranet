@@ -1,4 +1,4 @@
-﻿namespace RopeIntranet
+﻿namespace rope_intranet
 {
     /// <summary>
     /// A representation a wire stretched between two buildings, A and B.
