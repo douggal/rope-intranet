@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Diagnostics;
 using System.Text;
+using bentley_ottmann;
 
 Console.WriteLine("Rope-Intranet Bentley-Ottmann");
 
@@ -65,6 +66,7 @@ foreach (var c in Enumerable.Range(1,nbrCases))
     var n = int.Parse(input.Dequeue());
 
     // read endpoints of each wire
+    // parallel lists - e.g., A[0] to B[0] is one wire between bldgs
     // A = building on the left
     // B = building on the right
     var A = new List<int>();
@@ -75,13 +77,16 @@ foreach (var c in Enumerable.Range(1,nbrCases))
         A.Add(int.Parse(line[0].Trim()));
         B.Add(int.Parse(line[1].Trim()));
     }
+    var bo = new BentleyOttmann(A,B);
+    var x = bo.CountEm();
 
-    Console.WriteLine($"Case {c,4} has {n} wires with x intersections.");
-    Console.WriteLine("  A:" + String.Join(",",A));
+    Console.WriteLine($"Case {c,4} has {n} wires with {x} intersections.");
+    Console.WriteLine("  A:" + String.Join(",", A));
     Console.WriteLine("  B:" + String.Join(",", B));
 }
 
 //BentleyOttmann.Run();
 stopwatch.Stop();
-Console.WriteLine("\nDone.  Elapsed time: {0:##.###}ms", stopwatch.ElapsedMilliseconds);
+Console.WriteLine("\nDone.");
+Console.WriteLine("Elapsed time: {0:##.###}ms", stopwatch.ElapsedMilliseconds);
 

@@ -10,7 +10,7 @@ number of times two wires intersect.
 
 ## Notes and Folder strucuture
 
-January 2016: implemented with nested loops and try all combos.  O(N^2).
+January 2016: a solution using nested loops and try all combos.  O(N^2).
 
 November 2022:
 

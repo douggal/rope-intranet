@@ -7,6 +7,11 @@ namespace bentley_ottmann
 		{
 			// TODO: run Bentley-Ottmann
 		}
-	}
+
+        public int CountEm()
+        {
+			return 0;
+        }
+    }
 }
 
