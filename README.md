@@ -1,17 +1,32 @@
 # Rope Intranet
 
 ## What is this project about?
+
 An exercise in programming in C# with Visual Studio Community Edition 2015 and
 in managing source code with GitHub. -January 2016
 
-Updated October 2022.  Migrated the project to a new solution in C# with .NET 6 using
+Updated in autumn of 2022.  Migrated the project to a new solution in C# with .NET 7 using
 Visual Studio 2022 for Mac.
 
-## Folder strucuture
-rope-intranet/January2016 - original solution migrated to .NET Core
-rope-intranet/Oct2022 - a new solution
+## Notes and Folder strucuture
 
-## Problem
+November 2022:
+
+-Refactor and convert the project from .NET Framework 4 to .NET 7
+
+-The problem website link is no longer active, but a Google search shows similar problem here:
+at this address [Coding Competitions](https://codingcompetitions.withgoogle.com/codejam/round/0000000000432ccd/000000000043315a)
+
+-The solution file now has two projects:
+1.  The original nested loops solution is in "rope-intranet" project
+2.  A favorite author of many people and me as well is Jon Bentley, and when I stumbled upon a
+Wikipedia article describing an algorithm he collaborated on creating for solving this same type of problem,
+the [Bentley-Ottmann algorithm](https://en.wikipedia.org/wiki/Bentley%E2%80%93Ottmann_algorithm), 
+I thought I'd try their sweep line algo here. A solution using the Bentley-Ottmann
+algo is in the bentley-ottmann project.   Intent is to keep it light, and I'll leverage assumptions and take shortcuts in my implementation.
+
+## Problem statement
+
 From Google Code Jam Round 1C 2010 - Rope Intranet.  Quoting from the website:
 
 A company is located in two very tall buildings. The company
@@ -78,6 +93,3 @@ Large dataset
 Write a program to read the input data file and solve each case for number of intersections.  Assume the data file is of reasonable size and contains valid data.
 
 The problem is originally from [Google Code Jam Round 1C 2010 - Rope Intranet](https://code.google.com/codejam/contest/619102/dashboard)
-
-The link is no longer active, but a Google search shows similar problem
-at this address [Coding Competitions](https://codingcompetitions.withgoogle.com/codejam/round/0000000000432ccd/000000000043315a)

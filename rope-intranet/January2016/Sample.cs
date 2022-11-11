@@ -5,9 +5,19 @@ using System.Text;
 namespace rope_intranet
 {
     /// <summary>
-    /// A sample is what is called a case in the problem description.
-    /// It is a representation of two buildings with the intranet of
+    /// To avoid confusion with C# reserved word "case", each case in the
+    /// problem description is called a sample here.
+    /// 
+    /// Imagine two buildings with an intranet of communications
     /// wires strung between them.
+    ///
+    /// Represent the collection of wires as a List<Wire>
+    /// Each wire is a type Wire with endpoints of A and B
+    /// Algorithm - nested loops, O(N^2)
+    ///     taking two wires from the list of wires
+    ///     test see if they cross
+    ///     if the wires cross then count += 1
+    ///     continue until exhausted - all combos are tested
     /// </summary>
     public class Sample
     {
