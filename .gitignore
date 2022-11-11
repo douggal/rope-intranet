@@ -85,6 +85,9 @@ $RECYCLE.BIN/
 *.userprefs
 
 # Build results
+# https://stackoverflow.com/questions/2545602/how-to-git-ignore-subfolders-subdirectories
+**/bin/Debug/
+**/bin/Release/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
