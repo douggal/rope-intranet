@@ -3,7 +3,8 @@
 ## What is this project about?
 
 An exercise in programming in C#.  Imagine a primative communication system consisting of wires strung
-between two tall buildings facing each other.  Each wire connects an office window of one building
+between two tall buildings pictured as facing each other one on the left and other on the right.
+Each wire connects an office window of one building
 to an office window in the other.  Given each test case scenario, count the
 number of times two wires intersect.
 

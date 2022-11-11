@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Diagnostics;
 using System.Text;
 
 Console.WriteLine("Rope-Intranet Bentley-Ottmann");
@@ -43,8 +44,8 @@ Console.WriteLine($"Last line of input:");
 Console.WriteLine(input.Last());
 Console.WriteLine("---End input file specs---{0}{0}", Environment.NewLine);
 
-// read number of cases
-var nbrCases = input.Dequeue();
+// read number of cases, don't forget to convert String to Int
+var nbrCases = int.Parse(input.Dequeue());
 
 // Run():
 // for each case
@@ -54,7 +55,33 @@ var nbrCases = input.Dequeue();
 //    call the B-O algorithm passing in the list of wires
 //    print number of crossings
 
-//BentleyOttmann.Run();
+// create and start a Stopwatch instance
+// https://stackoverflow.com/questions/16376191/measuring-code-execution-time
+Stopwatch stopwatch = Stopwatch.StartNew();
 
-Console.WriteLine("Done");
+foreach (var c in Enumerable.Range(1,nbrCases))
+{
+    // read nbr wires
+    var n = int.Parse(input.Dequeue());
+
+    // read endpoints of each wire
+    // A = building on the left
+    // B = building on the right
+    var A = new List<int>();
+    var B = new List<int>();
+    foreach (var w in Enumerable.Range(1,n))
+    {
+        var line = input.Dequeue().Split(' ');
+        A.Add(int.Parse(line[0].Trim()));
+        B.Add(int.Parse(line[1].Trim()));
+    }
+
+    Console.WriteLine($"Case {c,4} has {n} wires with x intersections.");
+    Console.WriteLine("  A:" + String.Join(",",A));
+    Console.WriteLine("  B:" + String.Join(",", B));
+}
+
+//BentleyOttmann.Run();
+stopwatch.Stop();
+Console.WriteLine("\nDone.  Elapsed time: {0:##.###}ms", stopwatch.ElapsedMilliseconds);
 
