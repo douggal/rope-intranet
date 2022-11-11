@@ -2,13 +2,14 @@
 
 ## What is this project about?
 
-An exercise in programming in C# with Visual Studio Community Edition 2015 and
-in managing source code with GitHub. -January 2016
-
-Updated in autumn of 2022.  Migrated the project to a new solution in C# with .NET 7 using
-Visual Studio 2022 for Mac.
+An exercise in programming in C#.  Imagine a primative communication system consisting of wires strung
+between two tall buildings facing each other.  Each wire connects an office window of one building
+to an office window in the other.  Given each test case scenario, count the
+number of times two wires intersect.
 
 ## Notes and Folder strucuture
+
+January 2016: implemented with nested loops and try all combos.  O(N^2).
 
 November 2022:
 
@@ -18,12 +19,14 @@ November 2022:
 at this address [Coding Competitions](https://codingcompetitions.withgoogle.com/codejam/round/0000000000432ccd/000000000043315a)
 
 -The solution file now has two projects:
-1.  The original nested loops solution is in "rope-intranet" project
-2.  A favorite author of many people and me as well is Jon Bentley, and when I stumbled upon a
+1.  "rope-intranet" = the original nested loops problem solution.
+2.  "bentley-ottmann" = a favorite author of many people and me as well is Jon Bentley, and I stumbled upon a
 Wikipedia article describing an algorithm he collaborated on creating for solving this same type of problem,
-the [Bentley-Ottmann algorithm](https://en.wikipedia.org/wiki/Bentley%E2%80%93Ottmann_algorithm), 
-I thought I'd try their sweep line algo here. A solution using the Bentley-Ottmann
-algo is in the bentley-ottmann project.   Intent is to keep it light, and I'll leverage assumptions and take shortcuts in my implementation.
+the [Bentley-Ottmann algorithm](https://en.wikipedia.org/wiki/Bentley%E2%80%93Ottmann_algorithm).
+I thought I'd try their sweep line algo here.  Intent is to keep it light, and I'll leverage
+assumptions and take shortcuts in my implementation.
+I found this video explaination of the technique helpful
+(YouTube Phillip Kindermann)[https://www.youtube.com/watch?v=qkhUNzCGDt0].
 
 ## Problem statement
 

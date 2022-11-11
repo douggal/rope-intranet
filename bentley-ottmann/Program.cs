@@ -8,7 +8,7 @@ var df = "A-small-practice.txt";
 var fn = Path.Combine(Directory.GetCurrentDirectory(), "data" ,df);
 
 // Read in the input data line by line into a List<String>
-Console.WriteLine($"Reading input data file:  {fn}");
+Console.WriteLine($"Reading input data file");
 
 // Use a Queue instead of a List collection to hold the input
 // ref:  https://stackoverflow.com/questions/34399198/remove-and-return-first-item-of-list
@@ -35,13 +35,13 @@ catch (IOException e)
 
 // Quality control checks:
 // Nbr cases, nbr lines read, first line of file, last line of the file
-Console.WriteLine("---Quality Control---");
+Console.WriteLine("---Input file specs---");
 Console.WriteLine($"Number of lines read: {input.Count}");
 Console.WriteLine($"First line of input: (also number of cases):");
 Console.WriteLine(input.First());
 Console.WriteLine($"Last line of input:");
 Console.WriteLine(input.Last());
-Console.WriteLine("---End QC---{0}{0}", Environment.NewLine);
+Console.WriteLine("---End input file specs---{0}{0}", Environment.NewLine);
 
 // read number of cases
 var nbrCases = input.Dequeue();
@@ -50,7 +50,7 @@ var nbrCases = input.Dequeue();
 // for each case
 //    read number of wires
 //    for each wire
-//       read endpoints adn add to a list of the wires
+//       read endpoints and add to a list of the wires
 //    call the B-O algorithm passing in the list of wires
 //    print number of crossings
 
