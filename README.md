@@ -24,9 +24,9 @@ at this address [Coding Competitions](https://codingcompetitions.withgoogle.com/
 2.  "bentley-ottmann" = a favorite author of many people and me as well is Jon Bentley, and I stumbled upon a
 Wikipedia article describing an algorithm he collaborated on creating for solving this same type of problem,
 the [Bentley-Ottmann algorithm](https://en.wikipedia.org/wiki/Bentley%E2%80%93Ottmann_algorithm).
-I thought I'd try their sweep line algo here.  Intent is to keep it light, and I'll leverage
-assumptions and take shortcuts in my implementation.
-I found this video explaination of the technique helpful
+I thought I'd try their sweep line algo here.  While I was inspired by Bentley-Ottmann, it turned out
+clumsy.  I had to leverage assumptions and resort to using "for" loops in my implementation.
+I found this video series explaination of the technique helpful
 (YouTube Phillip Kindermann)[https://www.youtube.com/watch?v=qkhUNzCGDt0].
 
 ## Problem statement

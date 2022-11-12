@@ -6,7 +6,8 @@ using bentley_ottmann;
 Console.WriteLine("Rope-Intranet Bentley-Ottmann");
 
 // select input data set file
-var df = "A-small-practice.txt";
+//var df = "A-small-practice.txt";
+var df = "test.txt";
 var fn = Path.Combine(Directory.GetCurrentDirectory(), "data" ,df);
 
 // Read in the input data line by line into a List<String>

@@ -72,9 +72,9 @@ namespace bentley_ottmann
             // are there any endpoints where A[i] > p+1 and B[i] < p-1?
 
             var c = 0;
-            var max = A.Count;
+            var max = A.Count-1;
             // find any points in A less than p-1
-            for (int i = 0; i < max; i++)
+            for (int i = max; i >= 0; i--)
             {
                 if (A[i] < p)
                 {
