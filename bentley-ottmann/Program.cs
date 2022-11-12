@@ -88,5 +88,5 @@ foreach (var c in Enumerable.Range(1,nbrCases))
 //BentleyOttmann.Run();
 stopwatch.Stop();
 Console.WriteLine("\nDone.");
-Console.WriteLine("Elapsed time: {0:##.###}ms", stopwatch.ElapsedMilliseconds);
+Console.WriteLine("Time elapsed: {0:##.###}ms", stopwatch.ElapsedMilliseconds);
 
