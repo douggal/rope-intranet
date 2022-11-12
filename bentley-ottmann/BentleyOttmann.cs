@@ -44,23 +44,26 @@ namespace bentley_ottmann
             // Q = a priority queue, we know no two points share an endpoint
             var Q = new SortedSet<int>();
             foreach (var a in A) Q.Add(a);
-            foreach (var b in B) Q.Add(b);
-            Console.WriteLine(String.Join(",",Q));
+            //Console.WriteLine(String.Join(",",Q));
 
             // Sweep down from highest point and count up any intersections observed
             while (Q.Count > 0)
             {
                 // SortedSet<int> is in ascending order, so remove last item
                 var p = Q.Last();
-                Console.WriteLine($"Item removed {p}");
+                //Console.WriteLine($"Item removed {p}");
                 Q.Remove(p);
 
-                // look across the line at p: does anything cross it?
+                // look at the line whose endpoint in A is p: does anything cross it?
                 // that is, are there any endpoints where A[i] < p-1 and B[i] > p+1, or vice versa
-                handleEvent(p);  
+                handleEvent(p);
+
+                // Need: list of indexes of any points in A < p
+                //  and whose corresponding B point is > B[i]
+
             }
 
-			return count;
+            return count;
         }
 
         private int handleEvent(int p)
@@ -69,6 +72,22 @@ namespace bentley_ottmann
             // are there any endpoints where A[i] > p+1 and B[i] < p-1?
 
             var c = 0;
+            var max = A.Count;
+            // find any points in A less than p-1
+            for (int i = 0; i < max; i++)
+            {
+                if (A[i] < p)
+                {
+                    // find any points in B that cross, count 'em
+                    for (int j = 0; j < max; j++)
+                    {
+                        if (B[j] > B[i] && A[j] < p)
+                        {
+                            c += 1;
+                        }
+                    }
+                }
+            }
 
             return c;
         }
