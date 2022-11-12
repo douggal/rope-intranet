@@ -90,4 +90,4 @@ foreach (var c in Enumerable.Range(1,nbrCases))
 stopwatch.Stop();
 Console.WriteLine("\nDone.");
 Console.WriteLine("Time elapsed: {0:##.###}ms", stopwatch.ElapsedMilliseconds);
-
+Console.ReadKey();

@@ -81,7 +81,7 @@ namespace bentley_ottmann
                     // find any points in B that cross, count 'em
                     for (int j = 0; j < max; j++)
                     {
-                        if (B[j] > B[i] && A[j] < p)
+                        if (B[j] > A[i] && A[i] > p)
                         {
                             c += 1;
                         }
