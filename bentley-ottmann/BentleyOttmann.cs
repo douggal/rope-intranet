@@ -55,10 +55,14 @@ namespace bentley_ottmann
             // is just the pairs properties A[i], B[I] populated in constructor
 
             // Q = a priority queue, we know no two points share an endpoint
+            // a SortedSet<T> implements a balance binary search tree
             var Q = new SortedSet<Point>();
             foreach (var a in A) Q.Add(a);
             foreach (var b in B) Q.Add(b);
             Console.WriteLine(String.Join(",",Q));
+
+            // line segements currently intersecting the sweep line
+            var T = new SortedSet<Tuple<Point, Point>>();
 
             // Sweep down from highest point and count up any intersections observed
             while (Q.Count > 0)
@@ -68,8 +72,7 @@ namespace bentley_ottmann
                 //Console.WriteLine($"Item removed {p}");
                 Q.Remove(p);
 
-                // look at the line whose endpoint in A is p: does anything cross it?
-                // that is, are there any endpoints where A[i] < p-1 and B[i] > p+1, or vice versa
+                // only want to compare segments currently intersected by sweep line
                 handleEvent(p);
 
                 // Need: list of indexes of any points in A < p
@@ -84,22 +87,22 @@ namespace bentley_ottmann
         {
 
             var c = 0;
-            var max = A.Count-1;
-            // find any points in A less than p-1
-            for (int i = max; i >= 0; i--)
-            {
-                if (A[i] < p)
-                {
-                    // find any points in B that cross, count 'em
-                    for (int j = 0; j < max; j++)
-                    {
-                        if (B[j] > A[i] && A[i] > p)
-                        {
-                            c += 1;
-                        }
-                    }
-                }
-            }
+            //var max = A.Count-1;
+            //// find any points in A less than p-1
+            //for (int i = max; i >= 0; i--)
+            //{
+            //    if (A[i] < p)
+            //    {
+            //        // find any points in B that cross, count 'em
+            //        for (int j = 0; j < max; j++)
+            //        {
+            //            if (B[j] > A[i] && A[i] > p)
+            //            {
+            //                c += 1;
+            //            }
+            //        }
+            //    }
+            //}
 
             return c;
         }

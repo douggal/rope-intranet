@@ -26,7 +26,7 @@ namespace bentley_ottmann
         public int CompareTo(Point? p)
         {
             if (y == p.y) return 0;
-            else if (y > p.y) return 1;
+            else if (y > p.y || (y == p.y && x < p.x)) return 1;
             else return -1;
         }
     }

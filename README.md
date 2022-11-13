@@ -16,7 +16,7 @@ November 2022:
 
 -Refactor and convert the project from .NET Framework 4 to .NET 7
 
--The problem website link is no longer active, but a Google search shows similar problem here:
+-The problem website link no longer opens, but a Google search shows similar problem here:
 at this address [Coding Competitions](https://codingcompetitions.withgoogle.com/codejam/round/0000000000432ccd/000000000043315a)
 
 -The solution file now has two projects:
@@ -24,10 +24,9 @@ at this address [Coding Competitions](https://codingcompetitions.withgoogle.com/
 2.  "bentley-ottmann" = a favorite author of many people and me as well is Jon Bentley, and I stumbled upon a
 Wikipedia article describing an algorithm he collaborated on creating for solving this same type of problem,
 the [Bentley-Ottmann algorithm](https://en.wikipedia.org/wiki/Bentley%E2%80%93Ottmann_algorithm).
-I thought I'd try their sweep line algo here.  While I was inspired by Bentley-Ottmann, it turned out
-clumsy.  I had to leverage assumptions and resort to using "for" loops in my implementation.
-I found this video series explaination of the technique helpful
-(YouTube Phillip Kindermann)[https://www.youtube.com/watch?v=qkhUNzCGDt0].
+I thought I'd try their sweep line algo here.  While I was inspired by Bentley-Ottmann, my attempt to use it
+turned out clumsy. I found Phillip Kindermann's video series presentation on the sweep line technique helpful
+(YouTube)[https://www.youtube.com/watch?v=qkhUNzCGDt0].
 
 ## Problem statement
 
@@ -98,7 +97,13 @@ Write a program to read the input data file and solve each case for number of in
 
 The problem is originally from [Google Code Jam Round 1C 2010 - Rope Intranet](https://code.google.com/codejam/contest/619102/dashboard)
 
+## Key takeaways
+- Know what a sweep line algorithm is
+- Know that C# Base Class Library collections implment common data structures and the names
+choosen may not match familar terms, e.g., SortedSet<T> for balanced binary search tree.
+
 ## Notes
 
+- (YouTube Phillip Kindermann Sweep Line)[https://www.youtube.com/watch?v=qkhUNzCGDt0].
 - [How can I check if two line seqments intersect?](https://stackoverflow.com/questions/3838329/how-can-i-check-if-two-segments-intersect)
-
+- [SortedList\<T\> implements balanced binary search tree](https://learn.microsoft.com/en-us/previous-versions/ms379573\(v=vs.80\)?redirectedfrom=MSDN)
