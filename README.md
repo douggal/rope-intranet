@@ -97,3 +97,8 @@ Large dataset
 Write a program to read the input data file and solve each case for number of intersections.  Assume the data file is of reasonable size and contains valid data.
 
 The problem is originally from [Google Code Jam Round 1C 2010 - Rope Intranet](https://code.google.com/codejam/contest/619102/dashboard)
+
+## Notes
+
+- [How can I check if two line seqments intersect?](https://stackoverflow.com/questions/3838329/how-can-i-check-if-two-segments-intersect)
+
