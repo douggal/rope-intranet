@@ -6,6 +6,12 @@ namespace bentley_ottmann
         public List<Point> A { get; set; }
         public List<Point> B { get; set; }
 
+        SortedSet<Point> Q = new SortedSet<Point>();  // event points
+        SortedSet<Point> U = new SortedSet<Point>();  // upper end of line seg points
+        SortedSet<Point> L = new SortedSet<Point>();  // lower end of line seq points
+        SortedSet<Point> C = new SortedSet<Point>();  // Contains
+
+
         public BentleyOttmann(List<int> a, List<int> b)
 		{
             // The constructor takes two parallel lists, a and a.
@@ -56,13 +62,32 @@ namespace bentley_ottmann
 
             // Q = a priority queue, we know no two points share an endpoint
             // a SortedSet<T> implements a balance binary search tree
-            var Q = new SortedSet<Point>();
-            foreach (var a in A) Q.Add(a);
-            foreach (var b in B) Q.Add(b);
-            Console.WriteLine(String.Join(",",Q));
 
-            // line segements currently intersecting the sweep line
+            // populate Q with all the endpoints
+            for (int i = 0; i < A.Count; i++)
+            {
+                Q.Add(A[i]);
+                if (A[i].y > B[i].y) U.Add(A[i]);
+                else L.Add(A[i]);
+            }
+            for (int i = 0; i < B.Count; i++)
+            {
+                Q.Add(B[i]);
+                if (B[i].y > A[i].y) U.Add(A[i]);
+                else L.Add(B[i]);
+            }
+
+            // debug
+            Console.WriteLine("Q: " + String.Join(",", Q));
+            Console.WriteLine("U: " + String.Join(",", U));
+            Console.WriteLine("L: " + String.Join(",", L));
+
+            // T is the line segements currently intersecting the sweep line
             var T = new SortedSet<Tuple<Point, Point>>();
+
+            // sentinals, two vertical lines at infinity
+            T.Add(Tuple.Create(new Point(int.MaxValue, int.MaxValue), new Point(-int.MaxValue, -int.MaxValue)));
+            T.Add(Tuple.Create(new Point(-int.MaxValue, int.MaxValue), new Point(-int.MaxValue, -int.MaxValue)));
 
             // Sweep down from highest point and count up any intersections observed
             while (Q.Count > 0)
@@ -74,10 +99,6 @@ namespace bentley_ottmann
 
                 // only want to compare segments currently intersected by sweep line
                 handleEvent(p);
-
-                // Need: list of indexes of any points in A < p
-                //  and whose corresponding B point is > B[i]
-
             }
 
             return count;
@@ -87,6 +108,9 @@ namespace bentley_ottmann
         {
 
             var c = 0;
+
+
+
             //var max = A.Count-1;
             //// find any points in A less than p-1
             //for (int i = max; i >= 0; i--)

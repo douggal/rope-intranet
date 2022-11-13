@@ -26,7 +26,8 @@ Wikipedia article describing an algorithm he collaborated on creating for solvin
 the [Bentley-Ottmann algorithm](https://en.wikipedia.org/wiki/Bentley%E2%80%93Ottmann_algorithm).
 I thought I'd try their sweep line algo here.  While I was inspired by Bentley-Ottmann, my attempt to use it
 turned out clumsy. I found Phillip Kindermann's video series presentation on the sweep line technique helpful
-(YouTube)[https://www.youtube.com/watch?v=qkhUNzCGDt0].
+(YouTube)[https://www.youtube.com/watch?v=qkhUNzCGDt0].  The sweep line helps by limiting the comparisions
+to only those line segments touching the sweep line as it moves down from top to bottom.
 
 ## Problem statement
 
